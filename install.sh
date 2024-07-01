@@ -124,7 +124,6 @@ fi
 read -p "Do you want to install Atuin (Sync, search and backup shell history)? (Y/n) " answer
 if [[ ! $answer =~ ^[Nn]$ ]]; then
     curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
-    echo 'eval "$(atuin init bash)"' >> ~/.bashrc
 fi
 
 # install zoxide and fzf

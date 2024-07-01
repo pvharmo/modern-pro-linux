@@ -102,7 +102,7 @@ fi
 read -p "Do you want to install bottom (A customizable cross-platform graphical process/system monitor for the terminal)? (Y/n) " answer
 if [[ ! $answer =~ ^[Nn]$ ]]; then
     cargo install bottom --locked
-    echo "alias top=bottom" >> ~/.bashrc
+    echo "alias top=btm" >> ~/.bashrc
 fi
 
 # install procs
@@ -116,8 +116,8 @@ fi
 read -p "Do you want to install tealdeer (A very fast implementation of tldr. Collaborative cheatsheets for console commands)? (Y/n) " answer
 if [[ ! $answer =~ ^[Nn]$ ]]; then
     cargo install tealdeer
-    echo "alias man=tealdeer" >> ~/.bashrc
-    echo "alias tldr=tealdeer" >> ~/.bashrc
+    tldr --update
+    echo "alias man=tldr" >> ~/.bashrc
 fi
 
 # install atuin
